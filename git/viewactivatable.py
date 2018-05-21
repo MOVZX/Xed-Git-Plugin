@@ -17,7 +17,7 @@
 #  Foundation, Inc., 59 Temple Place, Suite 330,
 #  Boston, MA 02111-1307, USA.
 
-from gi.repository import GLib, GObject, Gtk, Gedit
+from gi.repository import GLib, GObject, Gtk, Xed
 from .diffrenderer import DiffType, DiffRenderer
 
 import difflib
@@ -40,8 +40,8 @@ class LineContext(object):
         return self.range[0] + (self.range[1] if len(self.range) > 1 else 1) - 1
 
 
-class GitPlugin(GObject.Object, Gedit.ViewActivatable):
-    view = GObject.property(type=Gedit.View)
+class GitPlugin(GObject.Object, Xed.ViewActivatable):
+    view = GObject.property(type=Xed.View)
 
     def __init__(self):
         GObject.Object.__init__(self)
@@ -155,7 +155,7 @@ class GitPlugin(GObject.Object, Gedit.ViewActivatable):
             self.file_contents_list = file_contents.decode(
                 'utf-8').splitlines()
 
-            # Remove the last empty line added by gedit automatically
+            # Remove the last empty line added by xed automatically
             last_item = self.file_contents_list[-1]
             if last_item[-1:] == '\n':
                 self.file_contents_list[-1] = last_item[:-1]
