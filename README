@@ -5,8 +5,8 @@ The original version use libgit2-glib and libgit2 to retrieve git repository
 information.  I modify to use git command.
 
 Install:
-	* mkdir -p $HOME/.local/share/gedit/plugins
-	* cp -r git git.plugin $HOME/.local/share/gedit/plugins/
+	* mkdir -p $HOME/.local/share/xed/plugins
+	* cp -r git git.plugin $HOME/.local/share/xed/plugins/
 
 Requirements:
-	* gedit
+	* xed

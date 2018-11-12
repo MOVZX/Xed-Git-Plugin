@@ -28,7 +28,7 @@ setup(name='xed-git-plugin',
       description='xed plugin to show git difference',
       author='Yan-ren Tsai',
       author_email='elleryq@gmail.com',
-      url='https://github.com/elleryq/xed-git-plugin',
+      url='https://github.com/MOVZX/xed-git-plugin',
       scripts=[],
       data_files=[
           ('lib/xed/plugins', ['git.plugin']),
